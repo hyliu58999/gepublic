@@ -1,0 +1,754 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<wsdl:definitions targetNamespace="http://mes.health.ge.com">
+<wsdl:types>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://startUnit.mes.health.ge.com">
+<xsd:complexType name="InputStartUnit">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="operationName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="routeName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="serialNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="userID" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="workCenter" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputStartUnit">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://mes.health.ge.com">
+<xsd:element name="startUnit">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:InputStartUnit"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="startUnitResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:OutputStartUnit"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="checkStatus">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns2:InputCheckStatus"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="checkStatusResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:OutputCheckStatus"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="saveDCP">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns3:InputSaveDCP"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="saveDCPResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns3:OutputSaveDCP"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="scrapUnit">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns4:InputScrapModel"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="scrapUnitResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns4:OutputScrapModel"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="completeOperation">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns5:InputCompleteOperation"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="completeOperationResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns5:OutputCompleteOperation"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="printLabelUnit">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns6:InputPrintLabelUnit"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="printLabelUnitResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns6:OutputPrintLabelUnit"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="birthUnit">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns7:InputBirthUnit"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="birthUnitResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns7:OutputBirthUnit"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="getUnitInfo">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns8:InputGetUnitInfo"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="getUnitInfoResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns8:OutputGetUnitInfo"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="sendAttachment">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns9:InputSendAttachment"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="sendAttachmentResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns9:OutputSendAttachment"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="changePNUnit">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns10:InputChangePNUnit"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="changePNUnitResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns10:OutputChangePNUnit"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="openDefect">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns11:InputOpenDefect"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="openDefectResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns11:OutputOpenDefect"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://checkStatus.mes.health.ge.com">
+<xsd:complexType name="InputCheckStatus">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="operationName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="routeName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="userID" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputCheckStatus">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://saveDCP.mes.health.ge.com">
+<xsd:complexType name="InputSaveDCP">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="completeOperation" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="consumedParts" nillable="true" type="ns3:ArrayOfConsumedPart"/>
+<xsd:element minOccurs="0" name="dcps" nillable="true" type="ns3:ArrayOfDCP"/>
+<xsd:element minOccurs="0" name="operationName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="reasonCode" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="routeName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="serialNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="userID" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfDCP">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="DCP" nillable="true" type="ns3:DCP"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="DCP">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="dcpImportTag" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="dcpValue" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfConsumedPart">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="ConsumedPart" nillable="true" type="ns3:ConsumedPart"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ConsumedPart">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="consumedPartNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="consumedPartRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="consumedUnitSNLotID" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="isPartUnitConsumption" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="lotQuantity" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="place" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="trackedConsumption" nillable="true" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputSaveDCP">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="consumedPartsResults" nillable="true" type="ns3:ArrayOfOutputConsumedParts"/>
+<xsd:element minOccurs="0" name="dCPResults" nillable="true" type="ns3:ArrayOfOutputDCP"/>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfOutputConsumedParts">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="OutputConsumedParts" nillable="true" type="ns3:OutputConsumedParts"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputConsumedParts">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="consumedPartNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="consumedPartRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="consumedPartSN" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="status" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="statusMessage" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfOutputDCP">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="OutputDCP" nillable="true" type="ns3:OutputDCP"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputDCP">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="dcpResult" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="dctTag" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://scrapUnit.mes.health.ge.com">
+<xsd:complexType name="InputScrapModel">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="comment" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="serialNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="userID" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputScrapModel">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://completeOperation.mes.health.ge.com">
+<xsd:complexType name="InputCompleteOperation">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="operationName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="reasonCode" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="routeName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="serialNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="userID" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputCompleteOperation">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://printLabelUnit.mes.health.ge.com">
+<xsd:complexType name="InputPrintLabelUnit">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="copiesQuantity" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="labelPN" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="labelRev" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="labelTemplatePN" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="labelTemplateRev" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="language" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="printerName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="serialNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="userID" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputPrintLabelUnit">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://birthUnit.mes.health.ge.com">
+<xsd:complexType name="InputBirthUnit">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="amount" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="partName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="sequenceSerialNumber" nillable="true" type="ns7:ArrayOfSequenceSerialNumber"/>
+<xsd:element minOccurs="0" name="useOPSM" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="userID" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfSequenceSerialNumber">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="SequenceSerialNumber" nillable="true" type="ns7:SequenceSerialNumber"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="SequenceSerialNumber">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="sequence" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="serialNumber" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputBirthUnit">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="sequenceSerialNumber" nillable="true" type="ns7:ArrayOfSequenceSerialNumber"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://getUnitInfo.mes.health.ge.com">
+<xsd:complexType name="InputGetUnitInfo">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="serialNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="userID" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputGetUnitInfo">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="unitInfos" nillable="true" type="ns8:ArrayOfUnitInfo"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfUnitInfo">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="UnitInfo" nillable="true" type="ns8:UnitInfo"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="UnitInfo">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="currentOperation" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nextOperation" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="previousOperation" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="properties" nillable="true" type="ns8:ArrayOfUnitProperty"/>
+<xsd:element minOccurs="0" name="queueName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="state" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfUnitProperty">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="UnitProperty" nillable="true" type="ns8:UnitProperty"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="UnitProperty">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="propertyName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="propertyValue" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://sendAttachment.mes.health.ge.com">
+<xsd:complexType name="InputSendAttachment">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="attachingUserID" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="attachmentFiles" nillable="true" type="ns9:ArrayOfAttachmentFile"/>
+<xsd:element minOccurs="0" name="operationName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="serialNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="userID" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfAttachmentFile">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="AttachmentFile" nillable="true" type="ns9:AttachmentFile"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="AttachmentFile">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="fileContent" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="fileName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="filePath" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputSendAttachment">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://changePNUnit.mes.health.ge.com">
+<xsd:complexType name="InputChangePNUnit">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="newPartNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="newPartRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="oldPartNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="oldPartRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="serialNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="userID" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputChangePNUnit">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://openDefect.mes.health.ge.com">
+<xsd:complexType name="InputOpenDefect">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="comment" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="defect3Steps" nillable="true" type="ns11:ArrayOfDefect3Step"/>
+<xsd:element minOccurs="0" name="defectDCPs" nillable="true" type="ns11:ArrayOfDefectDCP"/>
+<xsd:element minOccurs="0" name="defectType" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="eDMSModality" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="eDMSpl" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="operationName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="partRevision" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="routeName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="serialNumber" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="symptomCodes" nillable="true" type="ns11:ArrayOfSymptomCode"/>
+<xsd:element minOccurs="0" name="userID" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfDefect3Step">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="Defect3Step" nillable="true" type="ns11:Defect3Step"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="Defect3Step">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="step3DefectCode" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="step3DefectComment" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="step3DefectSymptom" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfSymptomCode">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="SymptomCode" nillable="true" type="ns11:SymptomCode"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="SymptomCode">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="level1" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="level2" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="level3" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="symptomType" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfDefectDCP">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="DefectDCP" nillable="true" type="ns11:DefectDCP"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="DefectDCP">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="dcpType" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="defectDCPValues" nillable="true" type="ns11:ArrayOfDefectDCPValue"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfDefectDCPValue">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="DefectDCPValue" nillable="true" type="ns11:DefectDCPValue"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="DefectDCPValue">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="dcpPrompt" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="dcpValue" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="OutputOpenDefect">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="errorCode" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="errorMessage" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+</wsdl:types>
+<wsdl:message name="openDefectResponse">
+<wsdl:part name="parameters" element="tns:openDefectResponse"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getUnitInfoRequest">
+<wsdl:part name="parameters" element="tns:getUnitInfo"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getUnitInfoResponse">
+<wsdl:part name="parameters" element="tns:getUnitInfoResponse"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="startUnitResponse">
+<wsdl:part name="parameters" element="tns:startUnitResponse"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="printLabelUnitRequest">
+<wsdl:part name="parameters" element="tns:printLabelUnit"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="scrapUnitResponse">
+<wsdl:part name="parameters" element="tns:scrapUnitResponse"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="saveDCPRequest">
+<wsdl:part name="parameters" element="tns:saveDCP"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="birthUnitRequest">
+<wsdl:part name="parameters" element="tns:birthUnit"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="sendAttachmentResponse">
+<wsdl:part name="parameters" element="tns:sendAttachmentResponse"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="openDefectRequest">
+<wsdl:part name="parameters" element="tns:openDefect"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="changePNUnitResponse">
+<wsdl:part name="parameters" element="tns:changePNUnitResponse"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="checkStatusRequest">
+<wsdl:part name="parameters" element="tns:checkStatus"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="printLabelUnitResponse">
+<wsdl:part name="parameters" element="tns:printLabelUnitResponse"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="changePNUnitRequest">
+<wsdl:part name="parameters" element="tns:changePNUnit"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="completeOperationRequest">
+<wsdl:part name="parameters" element="tns:completeOperation"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="saveDCPResponse">
+<wsdl:part name="parameters" element="tns:saveDCPResponse"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="scrapUnitRequest">
+<wsdl:part name="parameters" element="tns:scrapUnit"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="startUnitRequest">
+<wsdl:part name="parameters" element="tns:startUnit"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="birthUnitResponse">
+<wsdl:part name="parameters" element="tns:birthUnitResponse"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="checkStatusResponse">
+<wsdl:part name="parameters" element="tns:checkStatusResponse"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="completeOperationResponse">
+<wsdl:part name="parameters" element="tns:completeOperationResponse"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="sendAttachmentRequest">
+<wsdl:part name="parameters" element="tns:sendAttachment"> </wsdl:part>
+</wsdl:message>
+<wsdl:portType name="IWebServicePortType">
+<wsdl:operation name="startUnit">
+<wsdl:input name="startUnitRequest" message="tns:startUnitRequest"> </wsdl:input>
+<wsdl:output name="startUnitResponse" message="tns:startUnitResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="checkStatus">
+<wsdl:input name="checkStatusRequest" message="tns:checkStatusRequest"> </wsdl:input>
+<wsdl:output name="checkStatusResponse" message="tns:checkStatusResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="saveDCP">
+<wsdl:input name="saveDCPRequest" message="tns:saveDCPRequest"> </wsdl:input>
+<wsdl:output name="saveDCPResponse" message="tns:saveDCPResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="scrapUnit">
+<wsdl:input name="scrapUnitRequest" message="tns:scrapUnitRequest"> </wsdl:input>
+<wsdl:output name="scrapUnitResponse" message="tns:scrapUnitResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="completeOperation">
+<wsdl:input name="completeOperationRequest" message="tns:completeOperationRequest"> </wsdl:input>
+<wsdl:output name="completeOperationResponse" message="tns:completeOperationResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="printLabelUnit">
+<wsdl:input name="printLabelUnitRequest" message="tns:printLabelUnitRequest"> </wsdl:input>
+<wsdl:output name="printLabelUnitResponse" message="tns:printLabelUnitResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="birthUnit">
+<wsdl:input name="birthUnitRequest" message="tns:birthUnitRequest"> </wsdl:input>
+<wsdl:output name="birthUnitResponse" message="tns:birthUnitResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getUnitInfo">
+<wsdl:input name="getUnitInfoRequest" message="tns:getUnitInfoRequest"> </wsdl:input>
+<wsdl:output name="getUnitInfoResponse" message="tns:getUnitInfoResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="sendAttachment">
+<wsdl:input name="sendAttachmentRequest" message="tns:sendAttachmentRequest"> </wsdl:input>
+<wsdl:output name="sendAttachmentResponse" message="tns:sendAttachmentResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="changePNUnit">
+<wsdl:input name="changePNUnitRequest" message="tns:changePNUnitRequest"> </wsdl:input>
+<wsdl:output name="changePNUnitResponse" message="tns:changePNUnitResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="openDefect">
+<wsdl:input name="openDefectRequest" message="tns:openDefectRequest"> </wsdl:input>
+<wsdl:output name="openDefectResponse" message="tns:openDefectResponse"> </wsdl:output>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="IWebServiceHttpBinding" type="tns:IWebServicePortType">
+<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="startUnit">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="startUnitRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="startUnitResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="checkStatus">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="checkStatusRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="checkStatusResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="saveDCP">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="saveDCPRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="saveDCPResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="scrapUnit">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="scrapUnitRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="scrapUnitResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="completeOperation">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="completeOperationRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="completeOperationResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="printLabelUnit">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="printLabelUnitRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="printLabelUnitResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="birthUnit">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="birthUnitRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="birthUnitResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getUnitInfo">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getUnitInfoRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getUnitInfoResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="sendAttachment">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="sendAttachmentRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="sendAttachmentResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="changePNUnit">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="changePNUnitRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="changePNUnitResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="openDefect">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="openDefectRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="openDefectResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="IWebService">
+<wsdl:port name="IWebServiceHttpPort" binding="tns:IWebServiceHttpBinding">
+<wsdlsoap:address location="http://hcusmkemesvmp5.logon.ds.ge.com:8084/MachineConnectivity/IWebService"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
